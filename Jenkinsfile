@@ -111,8 +111,8 @@ pipeline {
         
         stage('Déposer l\'image créée sur DockerHub') {
             steps {
-                sh 'docker login -u "nidhalm" -p "211JMT1886+" docker.io'
-                sh 'docker push nidhalm/achat:latest'
+                sh 'docker login -u "nidhalm" -p "211JMT1886" docker.io'
+                sh 'docker push nidhalm/:latest'
             }
             post {
                 failure {
